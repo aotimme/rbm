@@ -27,9 +27,9 @@ func bernoulli(r *rand.Rand, p float64) int {
 type RBM struct {
   d int           // visible units
   m int           // hidden units
-  w [][]float64   // connection weights (m x d)
-  a []float64     // visible unit biases
-  b []float64     // hidden unit biases
+  w [][]float64   // connection weights (d x m)
+  a []float64     // visible unit biases (length d)
+  b []float64     // hidden unit biases (length m)
   cdt int         // number of contrastive divergence samples
   r *rand.Rand
 }
